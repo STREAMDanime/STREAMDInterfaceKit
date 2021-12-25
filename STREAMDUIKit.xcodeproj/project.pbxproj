@@ -11,6 +11,17 @@
 		4A6D18472776C2DB0064B48F /* STREAMDUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6D183C2776C2DB0064B48F /* STREAMDUIKit.framework */; };
 		4A6D184C2776C2DB0064B48F /* STREAMDUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D184B2776C2DB0064B48F /* STREAMDUIKitTests.swift */; };
 		4A6D184D2776C2DB0064B48F /* STREAMDUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6D183F2776C2DB0064B48F /* STREAMDUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A6D185E2776C3030064B48F /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D18562776C3020064B48F /* SubtitleLabel.swift */; };
+		4A6D185F2776C3030064B48F /* KeyVisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D18572776C3020064B48F /* KeyVisualView.swift */; };
+		4A6D18602776C3030064B48F /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D18582776C3020064B48F /* TextFieldWithTitle.swift */; };
+		4A6D18612776C3030064B48F /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D18592776C3020064B48F /* EmptyCell.swift */; };
+		4A6D18632776C3030064B48F /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D185B2776C3030064B48F /* TitleLabel.swift */; };
+		4A6D18642776C3030064B48F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D185C2776C3030064B48F /* TextField.swift */; };
+		4A6D18652776C3030064B48F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D185D2776C3030064B48F /* Button.swift */; };
+		4A6D18672776C3350064B48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D18662776C3350064B48F /* Assets.xcassets */; };
+		4A6D18692776C3390064B48F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D18682776C3390064B48F /* Colors.swift */; };
+		4A6D186C2776C34F0064B48F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A6D186B2776C34F0064B48F /* SnapKit */; };
+		4A6D18732776C4140064B48F /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D18712776C4140064B48F /* TagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +40,16 @@
 		4A6D18402776C2DB0064B48F /* STREAMDUIKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = STREAMDUIKit.docc; sourceTree = "<group>"; };
 		4A6D18462776C2DB0064B48F /* STREAMDUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STREAMDUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D184B2776C2DB0064B48F /* STREAMDUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STREAMDUIKitTests.swift; sourceTree = "<group>"; };
+		4A6D18562776C3020064B48F /* SubtitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
+		4A6D18572776C3020064B48F /* KeyVisualView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyVisualView.swift; sourceTree = "<group>"; };
+		4A6D18582776C3020064B48F /* TextFieldWithTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithTitle.swift; sourceTree = "<group>"; };
+		4A6D18592776C3020064B48F /* EmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
+		4A6D185B2776C3030064B48F /* TitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		4A6D185C2776C3030064B48F /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		4A6D185D2776C3030064B48F /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		4A6D18662776C3350064B48F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A6D18682776C3390064B48F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		4A6D18712776C4140064B48F /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6D186C2776C34F0064B48F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +93,16 @@
 		4A6D183E2776C2DB0064B48F /* STREAMDUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4A6D18662776C3350064B48F /* Assets.xcassets */,
+				4A6D18682776C3390064B48F /* Colors.swift */,
+				4A6D185B2776C3030064B48F /* TitleLabel.swift */,
+				4A6D185C2776C3030064B48F /* TextField.swift */,
+				4A6D18582776C3020064B48F /* TextFieldWithTitle.swift */,
+				4A6D185D2776C3030064B48F /* Button.swift */,
+				4A6D18562776C3020064B48F /* SubtitleLabel.swift */,
+				4A6D18572776C3020064B48F /* KeyVisualView.swift */,
+				4A6D18592776C3020064B48F /* EmptyCell.swift */,
+				4A6D18712776C4140064B48F /* TagView.swift */,
 				4A6D183F2776C2DB0064B48F /* STREAMDUIKit.h */,
 				4A6D18402776C2DB0064B48F /* STREAMDUIKit.docc */,
 			);
@@ -113,6 +145,9 @@
 			dependencies = (
 			);
 			name = STREAMDUIKit;
+			packageProductDependencies = (
+				4A6D186B2776C34F0064B48F /* SnapKit */,
+			);
 			productName = STREAMDUIKit;
 			productReference = 4A6D183C2776C2DB0064B48F /* STREAMDUIKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 4A6D18322776C2DB0064B48F;
+			packageReferences = (
+				4A6D186A2776C34F0064B48F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4A6D183D2776C2DB0064B48F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6D18672776C3350064B48F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +233,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6D185E2776C3030064B48F /* SubtitleLabel.swift in Sources */,
+				4A6D18732776C4140064B48F /* TagView.swift in Sources */,
+				4A6D18692776C3390064B48F /* Colors.swift in Sources */,
+				4A6D185F2776C3030064B48F /* KeyVisualView.swift in Sources */,
+				4A6D18602776C3030064B48F /* TextFieldWithTitle.swift in Sources */,
+				4A6D18642776C3030064B48F /* TextField.swift in Sources */,
 				4A6D18412776C2DB0064B48F /* STREAMDUIKit.docc in Sources */,
+				4A6D18632776C3030064B48F /* TitleLabel.swift in Sources */,
+				4A6D18612776C3030064B48F /* EmptyCell.swift in Sources */,
+				4A6D18652776C3030064B48F /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +400,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +429,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,6 +448,7 @@
 		4A6D18542776C2DB0064B48F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 599AK5LM2V;
@@ -414,6 +465,7 @@
 		4A6D18552776C2DB0064B48F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 599AK5LM2V;
@@ -458,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A6D186A2776C34F0064B48F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A6D186B2776C34F0064B48F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A6D186A2776C34F0064B48F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A6D18332776C2DB0064B48F /* Project object */;
 }
