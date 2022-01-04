@@ -14,7 +14,7 @@ public class SubtitleLabel: UILabel {
             
         self.text = text
         self.font = UIFont(name: "Avenir-Regular", size: 13)
-        self.textColor = Colors.secondaryText
+        self.textColor = UIColor.secondaryText
         self.numberOfLines = -1
     }
     

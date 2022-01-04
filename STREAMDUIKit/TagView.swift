@@ -15,7 +15,7 @@ public class TagView: UILabel {
         self.font = UIFont(name: "Poppins-Bold", size: 12)
         self.textColor = .white
         self.textAlignment = .center
-        self.backgroundColor = Colors.primaryPurple
+        self.backgroundColor = UIColor.primaryPurple
         self.text = title
         layer.masksToBounds = true
         setUpViews()
