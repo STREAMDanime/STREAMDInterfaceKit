@@ -29,7 +29,7 @@ public class EmptyCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Poppins-SemiBold", size: 15)
         label.textAlignment = .center
-        label.textColor = Colors.secondaryText
+        label.textColor = UIColor.secondaryText
         label.numberOfLines = -1
         return label
     }()

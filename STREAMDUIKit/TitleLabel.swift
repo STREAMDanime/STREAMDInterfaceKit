@@ -16,7 +16,7 @@ public class TitleLabel: UILabel {
         font = UIFont(name: "Poppins-Bold", size: 35)
         numberOfLines = 2
         adjustsFontSizeToFitWidth = true
-        textColor = Colors.primaryText
+        textColor = UIColor.primaryText
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = true
     }
