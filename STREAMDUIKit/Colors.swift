@@ -39,7 +39,7 @@ extension Color {
     
     public static let background        = Color("background", bundle: bundle)
     public static let primaryPurple     = Color("primaryPurple", bundle: bundle)
-    public static let accent            = Color("accent": bundle: bundle)
+    public static let accent            = Color("accent", bundle: bundle)
     
     public static let navigationBar     = Color("navigationBar", bundle: bundle)
     
