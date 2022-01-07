@@ -34,7 +34,7 @@ public class Button: UIButton {
         
         if #available(iOS 15.0, *) {
             var config = createButtonConfiguration()
-            config.baseBackgroundColor = UIColor.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
             config.image = image.withRenderingMode(.alwaysTemplate)
             self.configuration = config
             return
@@ -62,13 +62,13 @@ public class Button: UIButton {
         case .plain:
             self.backgroundColor = .clear
         case .filled:
-            self.backgroundColor = UIColor.primaryPurple
+            self.backgroundColor = .STREAMDColors.primaryPurple
         case .tinted:
-            self.backgroundColor = UIColor.primaryPurple?.withAlphaComponent(0.40)
+            self.backgroundColor = .STREAMDColors.primaryPurple.withAlphaComponent(0.40)
         case .gray:
             break
         case .bordered:
-            self.layer.borderColor = UIColor.primaryPurple?.cgColor
+            self.layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
             self.layer.borderWidth = 1
         case .accent:
             break
@@ -86,8 +86,8 @@ public class Button: UIButton {
         
         if #available(iOS 15.0, *) {
             var config = createButtonConfiguration()
-            config.baseBackgroundColor = UIColor.primaryPurple
-            config.baseForegroundColor = .white
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
+            config.baseForegroundColor = .STREAMDColors.primaryText
             
             var container = AttributeContainer()
             container.font = self.font
@@ -103,13 +103,13 @@ public class Button: UIButton {
         case .plain:
             self.backgroundColor = .clear
         case .filled:
-            self.backgroundColor = UIColor.primaryPurple
+            self.backgroundColor = .STREAMDColors.primaryPurple
         case .tinted:
-            self.backgroundColor = UIColor.primaryPurple?.withAlphaComponent(0.40)
+            self.backgroundColor = .STREAMDColors.primaryPurple.withAlphaComponent(0.40)
         case .gray:
             break
         case .bordered:
-            self.layer.borderColor = UIColor.primaryPurple?.cgColor
+            self.layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
             self.layer.borderWidth = 1
         case .accent:
             break
@@ -117,7 +117,7 @@ public class Button: UIButton {
         
         self.titleLabel?.font = self.font
         self.setTitle(title, for: .normal)
-        self.setTitleColor(.white)
+        self.setTitleColor(.STREAMDColors.primaryText)
         
     }
     
@@ -131,21 +131,21 @@ public class Button: UIButton {
         case .plain:
             var config = Configuration.plain()
             config.baseBackgroundColor = .clear
-            config.baseForegroundColor = UIColor.primaryText
+            config.baseForegroundColor = .STREAMDColors.primaryText
             return config
         case .filled:
             var config = Configuration.filled()
-            config.baseBackgroundColor = UIColor.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
             config.baseForegroundColor = .white
             return config
         case .tinted:
             var config = Configuration.tinted()
-            config.baseBackgroundColor = UIColor.primaryPurple
-            config.baseForegroundColor = UIColor.primaryText
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
+            config.baseForegroundColor = .STREAMDColors.primaryText
             return config
         case .gray:
             var config = Configuration.gray()
-            config.baseBackgroundColor = UIColor.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
             config.baseForegroundColor = .white
             return config
         case .bordered:
@@ -153,12 +153,12 @@ public class Button: UIButton {
             config.baseBackgroundColor = .clear
             config.baseForegroundColor = .white
             config.background.strokeWidth = 1
-            config.background.strokeColor = UIColor.primaryPurple
+            config.background.strokeColor = .STREAMDColors.primaryPurple
             return config
         case .accent:
             var config = Configuration.filled()
-            config.baseBackgroundColor = UIColor.accent
-            config.baseForegroundColor = UIColor.primaryText
+            config.baseBackgroundColor = .STREAMDColors.accent
+            config.baseForegroundColor = .STREAMDColors.primaryText
             return config
         }
     }
@@ -173,17 +173,17 @@ public class Button: UIButton {
             self.configuration = config
         case .filled:
             var config = Configuration.filled()
-            config.baseBackgroundColor = UIColor.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
             config.baseForegroundColor = .white
             self.configuration = config
         case .tinted:
             var config = Configuration.tinted()
-            config.baseBackgroundColor = UIColor.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
             config.baseForegroundColor = .white
             self.configuration = config
         case .gray:
             var config = Configuration.gray()
-            config.baseBackgroundColor = UIColor.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurple
             config.baseForegroundColor = .white
             self.configuration = config
         case .bordered:
@@ -191,11 +191,11 @@ public class Button: UIButton {
             config.baseBackgroundColor = .clear
             config.baseForegroundColor = .white
             config.background.strokeWidth = 1
-            config.background.strokeColor = UIColor.primaryPurple
+            config.background.strokeColor = .STREAMDColors.primaryPurple
             self.configuration = config
         case .accent:
             var config = Configuration.filled()
-            config.baseBackgroundColor = UIColor.accent
+            config.baseBackgroundColor = .STREAMDColors.accent
             config.baseForegroundColor = .white
             self.configuration = config
         }
@@ -284,6 +284,10 @@ public class Button: UIButton {
             return
         }
         self.imageView?.image = image
+    }
+    
+    public func setImagePlacement(_ placement: NSDirectionalRectEdge) {
+        configuration?.imagePlacement = placement
     }
     
     public func setAlignment(_ alignment: ButtonContentAlignment) {

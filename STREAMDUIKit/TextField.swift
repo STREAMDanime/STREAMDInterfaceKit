@@ -15,9 +15,9 @@ public class TextView: UITextView {
         super.init(frame: .zero, textContainer: nil)
         self.text = placeholder
         self.font = UIFont(name: "Avenir-Medium", size: 14)
-        self.textColor = UIColor.primaryText
-        self.tintColor = UIColor.gray2
-        self.backgroundColor = UIColor.accent
+        self.textColor = .STREAMDColors.primaryText
+        self.tintColor = .STREAMDColors.gray2
+        self.backgroundColor = .STREAMDColors.accent
         self.layer.cornerRadius = 6
         self.translatesAutoresizingMaskIntoConstraints = false
         self.isScrollEnabled = false
@@ -31,7 +31,7 @@ public class TextView: UITextView {
     public func addUnderline() {
         let line = CALayer()
         line.frame = CGRect(x: 0, y: self.frame.height - 16, width: self.frame.width, height: 2)
-        line.borderColor = UIColor.gray1!.cgColor
+        line.borderColor = UIColor.STREAMDColors.gray1.cgColor
         line.borderWidth = 3
         self.layer.addSublayer(line)
     }
@@ -47,13 +47,13 @@ public class TextField: UITextField {
         super.init(frame: .zero)
         
         self.attributedPlaceholder = NSAttributedString(string: "\(placeholder)", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.secondaryText!,
+            NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.secondaryText,
             NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 14)!
         ])
         self.isSecureTextEntry = isSecure
         self.font = UIFont(name: "Avenir-Medium", size: 14)
-        self.textColor = UIColor.primaryText
-        self.tintColor = UIColor.gray2
+        self.textColor = .STREAMDColors.primaryText
+        self.tintColor = .STREAMDColors.gray2
         self.translatesAutoresizingMaskIntoConstraints = false
         
     }
@@ -80,7 +80,7 @@ public class TextField: UITextField {
     public func addUnderline() {
         let line = CALayer()
         line.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width, height: 2)
-        line.borderColor = UIColor.gray1!.cgColor
+        line.borderColor = UIColor.STREAMDColors.gray1.cgColor
         line.borderWidth = 3
         self.layer.addSublayer(line)
     }

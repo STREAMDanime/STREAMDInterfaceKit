@@ -13,10 +13,10 @@ public class TitleLabel: UILabel {
         super.init(frame: .zero)
         
         text = title
-        font = UIFont(name: "Poppins-Bold", size: 35)
+        font = .STREAMDFonts.title
         numberOfLines = 2
         adjustsFontSizeToFitWidth = true
-        textColor = UIColor.primaryText
+        textColor = .STREAMDColors.primaryText
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = true
     }

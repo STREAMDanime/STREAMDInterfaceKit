@@ -47,17 +47,17 @@ public class TextViewWithTitle: UIView, UITextViewDelegate {
     
     // MARK: - View Setup
     private func setupAttributes() {
-        textView.backgroundColor = UIColor.accent
+        textView.backgroundColor = .STREAMDColors.accent
         textView.layer.cornerRadius = 6
         textView.font = UIFont(name: "Avenir-Heavy", size: 14)
-        textView.textColor = UIColor.primaryText
+        textView.textColor = .STREAMDColors.primaryText
         textView.keyboardAppearance = .dark
     }
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir-Heavy", size: 15)
-        label.textColor = UIColor.primaryText
+        label.textColor = .STREAMDColors.primaryText
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -122,7 +122,7 @@ public class TextFieldWithTitle: UIView, UITextFieldDelegate {
     public func setPlaceholder(withString p: String) {
         let attributedPlaceholder = NSAttributedString(string: p, attributes: [
             NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 13)!,
-            NSAttributedString.Key.foregroundColor: UIColor.gray2!.withAlphaComponent(0.65)
+            NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.gray2.withAlphaComponent(0.65)
         ])
         textField.attributedPlaceholder = attributedPlaceholder
     }
@@ -132,17 +132,17 @@ public class TextFieldWithTitle: UIView, UITextFieldDelegate {
     
     // MARK: - View Setup
     private func setupAttributes() {
-        textField.backgroundColor = UIColor.accent
+        textField.backgroundColor = .STREAMDColors.accent
         textField.layer.cornerRadius = 6
         textField.font = UIFont(name: "Avenir-Heavy", size: 14)
-        textField.textColor = UIColor.primaryText
+        textField.textColor = .STREAMDColors.primaryText
         textField.keyboardAppearance = .dark
     }
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir-Heavy", size: 15)
-        label.textColor = UIColor.primaryText
+        label.textColor = .STREAMDColors.primaryText
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

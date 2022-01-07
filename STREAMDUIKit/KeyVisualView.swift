@@ -13,7 +13,7 @@ public class KeyVisualView: UIImageView {
         super.init(frame: .zero)
         
         self.layer.cornerRadius = 6
-        self.backgroundColor = UIColor.accent
+        self.backgroundColor = .STREAMDColors.accent
         self.contentMode = .scaleAspectFill
         self.layer.masksToBounds = true
         self.clipsToBounds = true

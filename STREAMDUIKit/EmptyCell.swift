@@ -27,13 +27,18 @@ public class EmptyCell: UICollectionViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Poppins-SemiBold", size: 15)
+        label.font = .STREAMDFonts.body
         label.textAlignment = .center
-        label.textColor = UIColor.secondaryText
+        label.textColor = .STREAMDColors.secondaryText
         label.numberOfLines = -1
         return label
     }()
     private func setUpViews() {
+        
+        backgroundColor = .STREAMDColors.accent
+        layer.cornerRadius = 6
+        layer.masksToBounds = true
+        
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(64)
