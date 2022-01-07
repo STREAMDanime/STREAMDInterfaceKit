@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 public class TextField: UITextField {
     
@@ -39,7 +38,7 @@ public class TextField: UITextField {
     
     // MARK: - View Setup
     
-    let padding = UIEdgeInsets(top: 20, left: 12, bottom: 0, right: 12)
+    var padding = UIEdgeInsets(top: 20, left: 12, bottom: 0, right: 12)
 
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
@@ -68,63 +67,38 @@ public class TextField: UITextField {
         label.textColor = .STREAMDColors.secondaryText
         return label
     }()
-//    public let textField: UITextField = {
-//        let field = UITextField()
-//        field.font = UIFont(name: "Avenir-Medium", size: 14)
-//        field.textColor = .STREAMDColors.primaryText
-//        field.backgroundColor = .systemRed
-//        return field
-//    }()
     private func setUpViewsWithoutTitle() {
-        
-//        addSubview(textField)
-//        textField.snp.makeConstraints { make in
-//            make.left.equalToSuperview()
-//            make.right.equalToSuperview()
-//            make.top.equalToSuperview().offset(12)
-//            make.bottom.equalToSuperview().offset(-12)
-//        }
+        padding = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
     }
 
     private func setUpViewsWithTitle() {
-        
-//        addSubview(textField)
-//        textField.snp.makeConstraints { make in
-//            make.left.equalToSuperview().offset(12)
-//            make.right.equalToSuperview().offset(-12)
-//            make.top.equalToSuperview().offset(12)
-//            make.bottom.equalToSuperview().offset(-12)
-//        }
-        
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().offset(-12)
             make.top.equalToSuperview().offset(12)
         }
-
-        
     }
 }
 
-// MARK: SwiftUI Preview
-
+// MARK: - SwiftUI Preview
+import SwiftUI
 #if DEBUG
-    struct BackgroundViewContainer: UIViewRepresentable {
+    struct TextFieldViewContainer: UIViewRepresentable {
         typealias UIViewType = TextField
         func makeUIView(context: Context) -> UIViewType {
-            return TextField(title: "EMAIL ADDRESS", placeholder: "youremail@address.com", isSecure: false)
+            return TextField(placeholder: "youremail@address.com", isSecure: false)
         }
 
         func updateUIView(_ uiView: TextField, context: Context) {}
     }
 
-    struct BackgroundViewContainer_Previews: PreviewProvider {
+    struct TextFieldView_Preview: PreviewProvider {
         static var previews: some View {
             Group {
-                BackgroundViewContainer().colorScheme(.light)
+                TextFieldViewContainer().colorScheme(.light)
                     .frame(width: .infinity, height: 64, alignment: .leading)
-                BackgroundViewContainer().colorScheme(.dark)
+                TextFieldViewContainer().colorScheme(.dark)
                     .frame(width: .infinity, height: 64, alignment: .leading)
             }.previewLayout(.fixed(width: 400, height: 100))
         }

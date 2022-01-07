@@ -11,32 +11,68 @@ public class TextView: UITextView {
     
     public var shouldShowPlaceholder: Bool = true
     
-    public init(placeholder: String = "") {
+    public init(title: String = "") {
         super.init(frame: .zero, textContainer: nil)
-        self.text = placeholder
-        self.font = UIFont(name: "Avenir-Medium", size: 14)
-        self.textColor = .STREAMDColors.primaryText
-        self.tintColor = .STREAMDColors.gray2
-        self.backgroundColor = .STREAMDColors.accent
-        self.layer.cornerRadius = 6
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.isScrollEnabled = false
-        self.textContainerInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        titleLabel.text = title
+        title.isEmpty ? setUpViewsWithoutTitle() : setUpViewsWithTitle()
     }
         
     required init?(coder: NSCoder) {
         fatalError()
     }
 
-    public func addUnderline() {
-        let line = CALayer()
-        line.frame = CGRect(x: 0, y: self.frame.height - 16, width: self.frame.width, height: 2)
-        line.borderColor = UIColor.STREAMDColors.gray1.cgColor
-        line.borderWidth = 3
-        self.layer.addSublayer(line)
+    public func setUpAttributes() {
+        font = UIFont(name: "Avenir-Medium", size: 14)
+        textColor = .STREAMDColors.primaryText
+        backgroundColor = .STREAMDColors.accent
+        layer.cornerRadius = 6
+        isScrollEnabled = false
+        
+        textInputView.backgroundColor = .systemRed
     }
 
-    private func setupViews() {
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Avenir-Heavy", size: 12)
+        label.textColor = .STREAMDColors.secondaryText
+        return label
+    }()
+    private func setUpViewsWithoutTitle() {
+        textContainerInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+    }
+    private func setUpViewsWithTitle() {
+        textContainerInset = UIEdgeInsets(top: 20, left: 12, bottom: 0, right: 12)
+        addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+            make.top.equalToSuperview().offset(12)
+        }
     }
     
 }
+
+// MARK: - SwiftUI Preview
+import SwiftUI
+#if DEBUG
+    struct TextViewViewContainer: UIViewRepresentable {
+        typealias UIViewType = TextView
+        func makeUIView(context: Context) -> UIViewType {
+            return TextView(title: "Testing a title")
+        }
+
+        func updateUIView(_ uiView: TextView, context: Context) {}
+    }
+
+    struct TextViewView_Preview: PreviewProvider {
+        static var previews: some View {
+            Group {
+                TextViewViewContainer().colorScheme(.light)
+                    .frame(width: .infinity, height: 64, alignment: .leading)
+                TextViewViewContainer().colorScheme(.dark)
+                    .frame(width: .infinity, height: 64, alignment: .leading)
+            }.previewLayout(.fixed(width: 400, height: 100))
+        }
+    }
+#endif
+
