@@ -1,88 +1,132 @@
 //
-//  STREAMDTextField.swift
+//  InputView.swift
 //  STREAMD
 //
-//  Created by Jules Labador on 3/1/21.
+//  Created by Jules Labador on 3/3/21.
 //
 
 import UIKit
-
-public class TextView: UITextView {
-    
-    public var shouldShowPlaceholder: Bool = true
-    
-    public init(placeholder: String = "") {
-        super.init(frame: .zero, textContainer: nil)
-        self.text = placeholder
-        self.font = UIFont(name: "Avenir-Medium", size: 14)
-        self.textColor = .STREAMDColors.primaryText
-        self.tintColor = .STREAMDColors.gray2
-        self.backgroundColor = .STREAMDColors.accent
-        self.layer.cornerRadius = 6
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.isScrollEnabled = false
-        self.textContainerInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
-    }
-        
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
-
-    public func addUnderline() {
-        let line = CALayer()
-        line.frame = CGRect(x: 0, y: self.frame.height - 16, width: self.frame.width, height: 2)
-        line.borderColor = UIColor.STREAMDColors.gray1.cgColor
-        line.borderWidth = 3
-        self.layer.addSublayer(line)
-    }
-
-    private func setupViews() {
-    }
-    
-}
+import SwiftUI
 
 public class TextField: UITextField {
     
-    public init(placeholder: String = "", isSecure: Bool = false) {
+    public init(title: String = "", placeholder: String = "", isSecure: Bool = false) {
         super.init(frame: .zero)
-        
+                
+        titleLabel.text = title
+        title.isEmpty ? setUpViewsWithoutTitle() : setUpViewsWithTitle()
+
         self.attributedPlaceholder = NSAttributedString(string: "\(placeholder)", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.secondaryText,
-            NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 14)!
+            NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.secondaryText.withAlphaComponent(0.40),
+            NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 14)!,
         ])
-        self.isSecureTextEntry = isSecure
-        self.font = UIFont(name: "Avenir-Medium", size: 14)
-        self.textColor = .STREAMDColors.primaryText
-        self.tintColor = .STREAMDColors.gray2
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
+        isSecureTextEntry = isSecure
+        setPlaceholder(withString: placeholder)
+        setUpAttributes()
     }
-        
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    public func setPlaceholder(withString p: String) {
+        let attributedPlaceholder = NSAttributedString(string: p, attributes: [
+            NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 14)!,
+            NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.secondaryText.withAlphaComponent(0.40),
+        ])
+        self.attributedPlaceholder = attributedPlaceholder
+    }
     
-    let padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    // MARK: - View Setup
+    
+    let padding = UIEdgeInsets(top: 20, left: 12, bottom: 0, right: 12)
 
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-
+    
     override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
-        
     }
-
+    
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-    
-    public func addUnderline() {
-        let line = CALayer()
-        line.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width, height: 2)
-        line.borderColor = UIColor.STREAMDColors.gray1.cgColor
-        line.borderWidth = 3
-        self.layer.addSublayer(line)
+
+    private func setUpAttributes() {
+        layer.cornerRadius = 6
+        font = UIFont(name: "Avenir-Heavy", size: 14)
+        textColor = .STREAMDColors.primaryText
+        keyboardAppearance = .dark
+        backgroundColor = .STREAMDColors.accent
+        layer.cornerRadius = 6
     }
-    
+
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Avenir-Heavy", size: 12)
+        label.textColor = .STREAMDColors.secondaryText
+        return label
+    }()
+//    public let textField: UITextField = {
+//        let field = UITextField()
+//        field.font = UIFont(name: "Avenir-Medium", size: 14)
+//        field.textColor = .STREAMDColors.primaryText
+//        field.backgroundColor = .systemRed
+//        return field
+//    }()
+    private func setUpViewsWithoutTitle() {
+        
+//        addSubview(textField)
+//        textField.snp.makeConstraints { make in
+//            make.left.equalToSuperview()
+//            make.right.equalToSuperview()
+//            make.top.equalToSuperview().offset(12)
+//            make.bottom.equalToSuperview().offset(-12)
+//        }
+    }
+
+    private func setUpViewsWithTitle() {
+        
+//        addSubview(textField)
+//        textField.snp.makeConstraints { make in
+//            make.left.equalToSuperview().offset(12)
+//            make.right.equalToSuperview().offset(-12)
+//            make.top.equalToSuperview().offset(12)
+//            make.bottom.equalToSuperview().offset(-12)
+//        }
+        
+        addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+            make.top.equalToSuperview().offset(12)
+        }
+
+        
+    }
 }
+
+// MARK: SwiftUI Preview
+
+#if DEBUG
+    struct BackgroundViewContainer: UIViewRepresentable {
+        typealias UIViewType = TextField
+        func makeUIView(context: Context) -> UIViewType {
+            return TextField(title: "EMAIL ADDRESS", placeholder: "youremail@address.com", isSecure: false)
+        }
+
+        func updateUIView(_ uiView: TextField, context: Context) {}
+    }
+
+    struct BackgroundViewContainer_Previews: PreviewProvider {
+        static var previews: some View {
+            Group {
+                BackgroundViewContainer().colorScheme(.light)
+                    .frame(width: .infinity, height: 64, alignment: .leading)
+                BackgroundViewContainer().colorScheme(.dark)
+                    .frame(width: .infinity, height: 64, alignment: .leading)
+            }.previewLayout(.fixed(width: 400, height: 100))
+        }
+    }
+#endif
