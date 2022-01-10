@@ -45,5 +45,9 @@ extension Color {
         public static let accent            = Color("accent", bundle: bundle)
         
         public static let navigationBar     = Color("navigationBar", bundle: bundle)
+        
+        private static let premiumGradientColor1 = Color(red: 151/255, green: 51/255, blue: 238/255)
+        private static let premiumGradientColor2 = Color(red: 218/255, green: 34/255, blue: 255/255)
+        public static let premiumGradient   = LinearGradient(gradient: Gradient(colors: [Color.STREAMDColors.premiumGradientColor1, Color.STREAMDColors.premiumGradientColor2]), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }
