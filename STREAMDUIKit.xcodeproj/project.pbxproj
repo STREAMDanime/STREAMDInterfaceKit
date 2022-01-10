@@ -38,6 +38,7 @@
 		4AC5F3D7277ED55000191A4F /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5F3CA277ED54F00191A4F /* NotificationBanner.swift */; };
 		4AC5F3D8277ED55000191A4F /* BannerHapticGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5F3CB277ED54F00191A4F /* BannerHapticGenerator.swift */; };
 		4AEB33D427897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB33D327897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift */; };
+		D5072392278C0C2F00AA811D /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5072391278C0C2F00AA811D /* ViewControllerPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		4AC5F3CA277ED54F00191A4F /* NotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		4AC5F3CB277ED54F00191A4F /* BannerHapticGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerHapticGenerator.swift; sourceTree = "<group>"; };
 		4AEB33D327897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSubtitle_SwiftUI.swift; sourceTree = "<group>"; };
+		D5072391278C0C2F00AA811D /* ViewControllerPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEB33D527897C6000EF7CF4 /* SwiftUI */,
+				D507238C278C0C0400AA811D /* Utility */,
 				4AC5F3D9277ED55E00191A4F /* NotificationBannerSwift */,
 				4A6D18662776C3350064B48F /* Assets.xcassets */,
 				4A6D18682776C3390064B48F /* Colors.swift */,
@@ -179,6 +182,12 @@
 				4AEB33D327897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift */,
 			);
 			path = SwiftUI;
+		D507238C278C0C0400AA811D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D5072391278C0C2F00AA811D /* ViewControllerPreview.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6D185E2776C3030064B48F /* SubtitleLabel.swift in Sources */,
+				D5072392278C0C2F00AA811D /* ViewControllerPreview.swift in Sources */,
 				4A6D18732776C4140064B48F /* TagView.swift in Sources */,
 				4A6D18692776C3390064B48F /* Colors.swift in Sources */,
 				4AC5F3D1277ED55000191A4F /* BannerStyle.swift in Sources */,
