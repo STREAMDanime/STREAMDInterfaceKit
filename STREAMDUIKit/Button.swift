@@ -26,7 +26,7 @@ public class Button: UIButton {
     
     internal var buttonConfigurationEnum: ButtonConfigurationTypeEnum
     
-    public var font: UIFont? = UIFont(name: "Poppins-SemiBold", size: 15)!
+    public var font: UIFont? = UIFont.STREAMDFonts.sectionHeader
     
     public init(image: UIImage, buttonConfiguration: ButtonConfigurationTypeEnum) {
         self.buttonConfigurationEnum = buttonConfiguration
