@@ -15,6 +15,7 @@ public class TextView: UITextView {
         super.init(frame: .zero, textContainer: nil)
         titleLabel.text = title
         title.isEmpty ? setUpViewsWithoutTitle() : setUpViewsWithTitle()
+        setUpAttributes()
     }
         
     required init?(coder: NSCoder) {
@@ -27,8 +28,6 @@ public class TextView: UITextView {
         backgroundColor = .STREAMDColors.accent
         layer.cornerRadius = 6
         isScrollEnabled = false
-        
-        textInputView.backgroundColor = .systemRed
     }
 
     private let titleLabel: UILabel = {
@@ -41,7 +40,7 @@ public class TextView: UITextView {
         textContainerInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
     }
     private func setUpViewsWithTitle() {
-        textContainerInset = UIEdgeInsets(top: 20, left: 12, bottom: 0, right: 12)
+        textContainerInset = UIEdgeInsets(top: 30, left: 8, bottom: 0, right: 12)
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(12)
@@ -54,25 +53,28 @@ public class TextView: UITextView {
 
 // MARK: - SwiftUI Preview
 import SwiftUI
-#if DEBUG
-    struct TextViewViewContainer: UIViewRepresentable {
-        typealias UIViewType = TextView
-        func makeUIView(context: Context) -> UIViewType {
-            return TextView(title: "Testing a title")
-        }
 
-        func updateUIView(_ uiView: TextView, context: Context) {}
+struct TextViewViewContainer: UIViewRepresentable {
+    typealias UIViewType = TextView
+    func makeUIView(context: Context) -> UIViewType {
+        let view = TextView(title: "Testing a title")
+        view.text = "The quick brown fox jumped over the slow turtle."
+        return view
     }
 
-    struct TextViewView_Preview: PreviewProvider {
-        static var previews: some View {
-            Group {
-                TextViewViewContainer().colorScheme(.light)
-                    .frame(width: .infinity, height: 64, alignment: .leading)
-                TextViewViewContainer().colorScheme(.dark)
-                    .frame(width: .infinity, height: 64, alignment: .leading)
-            }.previewLayout(.fixed(width: 400, height: 100))
+    func updateUIView(_ uiView: TextView, context: Context) {}
+}
+
+struct TextViewView_Preview: PreviewProvider {
+    static var previews: some View {
+        Group {
+            TextViewViewContainer().colorScheme(.light)
+                .frame(width: .infinity, height: 64, alignment: .leading)
+            TextViewViewContainer().colorScheme(.dark)
+                .frame(width: .infinity, height: 64, alignment: .leading)
         }
+        .previewLayout(.fixed(width: 400, height: 64))
     }
-#endif
+}
+
 

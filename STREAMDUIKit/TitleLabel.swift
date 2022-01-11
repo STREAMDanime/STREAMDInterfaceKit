@@ -9,6 +9,7 @@ import UIKit
 
 public class TitleLabel: UILabel {
     
+    /// Create a standard title label with a given string.
     public init(_ title: String = "-") {
         super.init(frame: .zero)
         

@@ -13,9 +13,10 @@ public class SubtitleLabel: UILabel {
         super.init(frame: .zero)
             
         self.text = text
-        self.font = UIFont(name: "Avenir-Regular", size: 13)
+        self.font = .STREAMDFonts.subtitle
         self.textColor = .STREAMDColors.secondaryText
         self.numberOfLines = -1
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
