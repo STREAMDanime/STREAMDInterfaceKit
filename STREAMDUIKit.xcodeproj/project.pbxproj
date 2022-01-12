@@ -109,8 +109,8 @@
 		4A6D18322776C2DB0064B48F = {
 			isa = PBXGroup;
 			children = (
-				4A6D183E2776C2DB0064B48F /* Sources */,
-				4A6D184A2776C2DB0064B48F /* Tests */,
+				4A6D183E2776C2DB0064B48F /* STREAMDUIKit */,
+				4A6D184A2776C2DB0064B48F /* STREAMDUIKitTests */,
 				4A6D183D2776C2DB0064B48F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,20 +124,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4A6D183E2776C2DB0064B48F /* Sources */ = {
+		4A6D183E2776C2DB0064B48F /* STREAMDUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				D5B920FA278E522D003CA31D /* STREAMDUIKit */,
+				D5B920F7278E51B3003CA31D /* SwiftUI */,
+				D507238C278C0C0400AA811D /* Utility */,
+				4AC5F3D9277ED55E00191A4F /* NotificationBannerSwift */,
+				4A6D18662776C3350064B48F /* Assets.xcassets */,
+				4A6D18682776C3390064B48F /* Colors.swift */,
+				4A6A30212784FF09009D4221 /* Fonts.swift */,
+				4A6D185B2776C3030064B48F /* TitleLabel.swift */,
+				4A6853C427889E4600605DF2 /* TextView.swift */,
+				4A6D18582776C3020064B48F /* TextField.swift */,
+				4A6853C627889E5D00605DF2 /* TextViewWithTitle.swift */,
+				4A6D185D2776C3030064B48F /* Button.swift */,
+				4A6D18562776C3020064B48F /* SubtitleLabel.swift */,
+				4A6D18572776C3020064B48F /* KeyVisualView.swift */,
+				4A6D18592776C3020064B48F /* EmptyCell.swift */,
+				4A6D18712776C4140064B48F /* TagView.swift */,
+				4A6D183F2776C2DB0064B48F /* STREAMDUIKit.h */,
+				4A6D18402776C2DB0064B48F /* STREAMDUIKit.docc */,
 			);
-			path = Sources;
+			path = STREAMDUIKit;
 			sourceTree = "<group>";
 		};
-		4A6D184A2776C2DB0064B48F /* Tests */ = {
+		4A6D184A2776C2DB0064B48F /* STREAMDUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				4A6D184B2776C2DB0064B48F /* STREAMDUIKitTests.swift */,
 			);
-			path = Tests;
+			path = STREAMDUIKitTests;
 			sourceTree = "<group>";
 		};
 		4AC5F3D9277ED55E00191A4F /* NotificationBannerSwift */ = {
@@ -174,30 +190,6 @@
 				D5B920F8278E51B3003CA31D /* TitleAndSubtitle_SwiftUI.swift */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		D5B920FA278E522D003CA31D /* STREAMDUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				D5B920F7278E51B3003CA31D /* SwiftUI */,
-				D507238C278C0C0400AA811D /* Utility */,
-				4AC5F3D9277ED55E00191A4F /* NotificationBannerSwift */,
-				4A6D18662776C3350064B48F /* Assets.xcassets */,
-				4A6D18682776C3390064B48F /* Colors.swift */,
-				4A6A30212784FF09009D4221 /* Fonts.swift */,
-				4A6D185B2776C3030064B48F /* TitleLabel.swift */,
-				4A6853C427889E4600605DF2 /* TextView.swift */,
-				4A6D18582776C3020064B48F /* TextField.swift */,
-				4A6853C627889E5D00605DF2 /* TextViewWithTitle.swift */,
-				4A6D185D2776C3030064B48F /* Button.swift */,
-				4A6D18562776C3020064B48F /* SubtitleLabel.swift */,
-				4A6D18572776C3020064B48F /* KeyVisualView.swift */,
-				4A6D18592776C3020064B48F /* EmptyCell.swift */,
-				4A6D18712776C4140064B48F /* TagView.swift */,
-				4A6D183F2776C2DB0064B48F /* STREAMDUIKit.h */,
-				4A6D18402776C2DB0064B48F /* STREAMDUIKit.docc */,
-			);
-			path = STREAMDUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
