@@ -31,6 +31,8 @@ extension UIColor {
         public static let yellow           = UIColor(named: "yellow", in: bundle, compatibleWith: nil)!
         
         public static let darkGray         = UIColor(named: "darkGray", in: bundle, compatibleWith: nil)!
+        
+        public static let crunchyroll      = UIColor(named: "crunchyroll", in: bundle, compatibleWith: nil)!
     }
 }
 
@@ -53,5 +55,7 @@ extension Color {
         private static let premiumGradientColor1 = Color(red: 151/255, green: 51/255, blue: 238/255)
         private static let premiumGradientColor2 = Color(red: 218/255, green: 34/255, blue: 255/255)
         public static let premiumGradient   = LinearGradient(gradient: Gradient(colors: [Color.STREAMDColors.premiumGradientColor1, Color.STREAMDColors.premiumGradientColor2]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        
+        public static let crunchyroll = Color("crunchyroll", bundle: bundle)
     }
 }
