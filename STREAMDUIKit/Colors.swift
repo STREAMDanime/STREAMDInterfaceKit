@@ -21,6 +21,7 @@ extension UIColor {
         public static let gray1            = UIColor(named: "gray-1", in: bundle, compatibleWith: nil)!
         public static let gray2            = UIColor(named: "gray-2", in: bundle, compatibleWith: nil)!
         public static let primaryPurple    = UIColor(named: "primaryPurple", in: bundle, compatibleWith: nil)!
+        public static let primaryPurpleAccent = UIColor(named: "primaryPurpleAccent", in: bundle, compatibleWith: nil)!
         public static let navigationBar    = UIColor(named: "navigationBar", in: bundle, compatibleWith: nil)!
         public static let accent           = UIColor(named: "accent", in: bundle, compatibleWith: nil)!
         
@@ -42,9 +43,12 @@ extension Color {
         
         public static let background        = Color("background", bundle: bundle)
         public static let primaryPurple     = Color("primaryPurple", bundle: bundle)
+        public static let primaryPurpleAccent = Color("primaryPurpleAccent", bundle: bundle)
         public static let accent            = Color("accent", bundle: bundle)
         
         public static let navigationBar     = Color("navigationBar", bundle: bundle)
+        
+        public static let red               = Color("red", bundle: bundle)
         
         private static let premiumGradientColor1 = Color(red: 151/255, green: 51/255, blue: 238/255)
         private static let premiumGradientColor2 = Color(red: 218/255, green: 34/255, blue: 255/255)

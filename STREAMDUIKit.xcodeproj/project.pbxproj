@@ -37,7 +37,7 @@
 		4AC5F3D6277ED55000191A4F /* UIWindow+orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5F3C9277ED54F00191A4F /* UIWindow+orientation.swift */; };
 		4AC5F3D7277ED55000191A4F /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5F3CA277ED54F00191A4F /* NotificationBanner.swift */; };
 		4AC5F3D8277ED55000191A4F /* BannerHapticGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5F3CB277ED54F00191A4F /* BannerHapticGenerator.swift */; };
-		4AEB33D427897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB33D327897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift */; };
+		4AF54205278D450700E4DF74 /* TitleAndSubtitle_SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF54204278D450700E4DF74 /* TitleAndSubtitle_SwiftUI.swift */; };
 		D5072392278C0C2F00AA811D /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5072391278C0C2F00AA811D /* ViewControllerPreview.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +82,7 @@
 		4AC5F3C9277ED54F00191A4F /* UIWindow+orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+orientation.swift"; sourceTree = "<group>"; };
 		4AC5F3CA277ED54F00191A4F /* NotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		4AC5F3CB277ED54F00191A4F /* BannerHapticGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerHapticGenerator.swift; sourceTree = "<group>"; };
-		4AEB33D327897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSubtitle_SwiftUI.swift; sourceTree = "<group>"; };
+		4AF54204278D450700E4DF74 /* TitleAndSubtitle_SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSubtitle_SwiftUI.swift; sourceTree = "<group>"; };
 		D5072391278C0C2F00AA811D /* ViewControllerPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +127,6 @@
 		4A6D183E2776C2DB0064B48F /* STREAMDUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				4AEB33D527897C6000EF7CF4 /* SwiftUI */,
 				D507238C278C0C0400AA811D /* Utility */,
 				4AC5F3D9277ED55E00191A4F /* NotificationBannerSwift */,
 				4A6D18662776C3350064B48F /* Assets.xcassets */,
@@ -144,6 +143,7 @@
 				4A6D18712776C4140064B48F /* TagView.swift */,
 				4A6D183F2776C2DB0064B48F /* STREAMDUIKit.h */,
 				4A6D18402776C2DB0064B48F /* STREAMDUIKit.docc */,
+				4AF54204278D450700E4DF74 /* TitleAndSubtitle_SwiftUI.swift */,
 			);
 			path = STREAMDUIKit;
 			sourceTree = "<group>";
@@ -176,12 +176,6 @@
 			path = NotificationBannerSwift;
 			sourceTree = "<group>";
 		};
-		4AEB33D527897C6000EF7CF4 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				4AEB33D327897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift */,
-			);
-			path = SwiftUI;
 		D507238C278C0C0400AA811D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,8 +319,8 @@
 				4A6A30222784FF09009D4221 /* Fonts.swift in Sources */,
 				4AC5F3CC277ED55000191A4F /* BannerPositionFrame.swift in Sources */,
 				4AC5F3D4277ED55000191A4F /* GrowingNotificationBanner.swift in Sources */,
-				4AEB33D427897AF000EF7CF4 /* TitleAndSubtitle_SwiftUI.swift in Sources */,
 				4A6D18412776C2DB0064B48F /* STREAMDUIKit.docc in Sources */,
+				4AF54205278D450700E4DF74 /* TitleAndSubtitle_SwiftUI.swift in Sources */,
 				4A6D18632776C3030064B48F /* TitleLabel.swift in Sources */,
 				4AC5F3D0277ED55000191A4F /* NotificationBannerQueue.swift in Sources */,
 				4A6853C527889E4600605DF2 /* TextView.swift in Sources */,

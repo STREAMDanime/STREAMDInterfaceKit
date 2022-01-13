@@ -17,7 +17,7 @@ extension Font {
         public static let heading3 = Font.custom("Poppins-Bold", fixedSize: 18)
         public static let body = Font.custom("Avenir-Medium", fixedSize: 14)
         public static let sectionHeader = Font.custom("Poppins-Bold", size: 13)
-        public static let buttonTitle = Font.custom("Poppins-SemiBold", size: 14)
+        public static let buttonTitle = Font.custom("Avenir-Heavy", size: 15)
     }
 }
 
@@ -30,6 +30,6 @@ extension UIFont {
         public static let heading3 = UIFont(name: "Poppins-Bold", size: 18)
         public static let body = UIFont(name: "Avenir-Medium", size: 14)
         public static let sectionHeader = UIFont(name: "Poppins-Bold", size: 14)
-        public static let buttonTitle = UIFont(name: "Poppins-SemiBold", size: 14)
+        public static let buttonTitle = UIFont(name: "Avenir-Heavy", size: 15)
     }
 }
