@@ -12,7 +12,7 @@ import SwiftUI
 // UIKit
 extension UIColor {
     public struct STREAMDColors {
-        private static let bundle = Bundle(identifier: "io.STREAMDanime.STREAMDUIKit")
+        private static let bundle = Bundle.module // used in Swift packages to get bundle
         
         public static let primaryText      = UIColor(named: "primaryText", in: bundle, compatibleWith: nil)!
         public static let secondaryText    = UIColor(named: "secondaryText", in: bundle, compatibleWith: nil)!
@@ -36,7 +36,7 @@ extension UIColor {
 
 extension Color {
     public struct STREAMDColors {
-        private static let bundle = Bundle(identifier: "io.STREAMDanime.STREAMDUIKit")
+        private static let bundle = Bundle.module // used in Swift packages to get bundle
         
         public static let primaryText       = Color("primaryText", bundle: bundle)
         public static let secondaryText     = Color("secondaryText", bundle: bundle)

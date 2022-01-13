@@ -8,6 +8,38 @@
 import SwiftUI
 import UIKit
 
+/// An internal list of all custom fonts included in the app. This enumeration is used to programmatically load fonts
+/// when the app starts.
+internal enum STREAMDFonts: CaseIterable {
+    enum Poppins: String, CaseIterable {
+        var fontExtension: String {
+            return "ttf"
+        }
+        var fullName: String {
+            return "Poppins-\(self.rawValue)"
+        }
+        
+        case black = "Black"
+        case blackItalic = "BlackItalic"
+        case bold = "Bold"
+        case boldItalic = "BoldItalic"
+        case extraBold = "ExtraBold"
+        case extraBoldItalic = "ExtraBoldItalic"
+        case extraLight = "ExtraLight"
+        case extraLightItalic = "ExtraLightItalic"
+        case italic = "Italic"
+        case light = "Light"
+        case lightItalic = "LightItalic"
+        case medium = "Medium"
+        case mediumItalic = "MediumItalic"
+        case regular = "Regular"
+        case semiBold = "SemiBold"
+        case semiBoldItalic = "SemiBoldItalic"
+        case thin = "Thin"
+        case thinItalic = "ThinItalic"
+    }
+}
+
 extension Font {
     public struct STREAMDFonts {
         public static let title = Font.custom("Poppins-Bold", fixedSize: 35)

@@ -9,10 +9,10 @@ import SwiftUI
 
 public struct TitleAndSubtitle_SwiftUI: View {
     
-    @State var title: String = ""
-    @State var subtitle: String = ""
+    let title: String
+    let subtitle: String
     
-    public init(title: String = "", subtitle: String = "") {
+    public init(title: String, subtitle: String) {
         self.title = title
         self.subtitle = subtitle
     }
@@ -22,13 +22,21 @@ public struct TitleAndSubtitle_SwiftUI: View {
             Text(title)
                 .font(.STREAMDFonts.title)
                 .foregroundColor(Color.STREAMDColors.primaryText)
-                .frame(maxWidth: .infinity, alignment: .leading)
             Text(subtitle)
                 .font(.STREAMDFonts.subtitle)
                 .foregroundColor(Color.STREAMDColors.secondaryText)
-                .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .background(Color.red)
+//        VStack(alignment: .leading) {
+//            Text(title)
+//                .font(.STREAMDFonts.title)
+//                .foregroundColor(Color.STREAMDColors.primaryText)
+//                .frame(maxWidth: .infinity, alignment: .leading)
+//            Text(subtitle)
+//                .font(.STREAMDFonts.subtitle)
+//                .foregroundColor(Color.STREAMDColors.secondaryText)
+//                .frame(maxWidth: .infinity, alignment: .leading)
+//        }
+//        .background(Color.red)
     }
 }
 
