@@ -33,6 +33,10 @@ extension UIColor {
         public static let darkGray         = UIColor(named: "darkGray", in: bundle, compatibleWith: nil)!
         
         public static let crunchyroll      = UIColor(named: "crunchyroll", in: bundle, compatibleWith: nil)!
+        public static let vrv              = UIColor(named: "vrv", in: bundle, compatibleWith: nil)!
+        public static let funimation       = UIColor(named: "funimation", in: bundle, compatibleWith: nil)!
+        public static let hiDive           = UIColor(named: "hiDive", in: bundle, compatibleWith: nil)!
+        public static let netflix          = UIColor(named: "netflix", in: bundle, compatibleWith: nil)!
     }
 }
 
@@ -57,5 +61,9 @@ extension Color {
         public static let premiumGradient   = LinearGradient(gradient: Gradient(colors: [Color.STREAMDColors.premiumGradientColor1, Color.STREAMDColors.premiumGradientColor2]), startPoint: .topLeading, endPoint: .bottomTrailing)
         
         public static let crunchyroll = Color("crunchyroll", bundle: bundle)
+        public static let vrv = Color("vrv", bundle: bundle)
+        public static let funimation = Color("funimation", bundle: bundle)
+        public static let hiDive = Color("hiDive", bundle: bundle)
+        public static let netflix = Color("netflix", bundle: bundle)
     }
 }
