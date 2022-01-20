@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct TextField_SwiftUI: View {
     
     private let title: String
     private let placeholder: String
@@ -26,17 +26,20 @@ struct SwiftUIView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 16)
                 .padding(.horizontal, 12)
-                .font(Font.custom("Avenir-Heavy", size: 12))
+                .font(Font.custom("Avenir-Heavy", size: 12)!)
             TextField(placeholder, text: $text)
                 .disableAutocorrection(true)
                 .padding(.horizontal, 12)
                 .padding(.bottom, 12)
+                .font(Font.custom("Avenir-Heavy", size: 14)!)
         }
+        .background(Color.STREAMDColors.accent)
+        .cornerRadius(6)
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct TextField_SwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        TextField_SwiftUI()
     }
 }
