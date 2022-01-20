@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct TextField_SwiftUI: View {
+struct SecureTextField_SwiftUI: View {
     
     private let title: String
     private let placeholder: String
     
-    public @Binding var text: String
+    public @Binding var text: String = ""
     
     public init(title: String, placeholder: String, text: String) {
         self.title = title
@@ -26,12 +26,12 @@ struct TextField_SwiftUI: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 16)
                 .padding(.horizontal, 12)
-                .font(Font.custom("Avenir-Heavy", size: 12))
+                .font(Font.custom("Avenir-Heavy", size: 12)!)
             TextField(placeholder, text: $text)
                 .disableAutocorrection(true)
                 .padding(.horizontal, 12)
                 .padding(.bottom, 12)
-                .font(Font.custom("Avenir-Heavy", size: 14))
+                .font(Font.custom("Avenir-Heavy", size: 14)!)
                 .sec
         }
         .background(Color.STREAMDColors.accent)
@@ -39,9 +39,8 @@ struct TextField_SwiftUI: View {
     }
 }
 
-struct TextField_SwiftUI_Previews: PreviewProvider {
+struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        @State var text: String
-        TextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: $text)
+        SwiftUIView()
     }
 }
