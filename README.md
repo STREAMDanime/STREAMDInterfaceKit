@@ -2,6 +2,7 @@
 
 STREAMDInterfaceKit is a Swift package that contains standard views, styles, and fonts for the STREAMD app.
 
+**Make sure not to have your Mac selected as the runnable device otherwise you'll get weird Mac errors**
 
 ## How to Install
 
