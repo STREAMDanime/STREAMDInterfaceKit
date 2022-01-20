@@ -12,7 +12,7 @@ struct TextField_SwiftUI: View {
     private let title: String
     private let placeholder: String
     
-    public @Binding var text: String
+    @Binding var text: String
     
     public init(title: String, placeholder: String, text: String) {
         self.title = title
@@ -27,6 +27,7 @@ struct TextField_SwiftUI: View {
                 .padding(.top, 16)
                 .padding(.horizontal, 12)
                 .font(Font.custom("Avenir-Heavy", size: 12))
+            TextField
             TextField(placeholder, text: $text)
                 .disableAutocorrection(true)
                 .padding(.horizontal, 12)

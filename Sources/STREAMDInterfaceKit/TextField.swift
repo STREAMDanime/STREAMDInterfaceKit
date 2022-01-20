@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class TextField: UITextField {
+public class TextField_UIKit: UITextField {
     
     public init(title: String = "", placeholder: String = "", isSecure: Bool = false) {
         super.init(frame: .zero)
