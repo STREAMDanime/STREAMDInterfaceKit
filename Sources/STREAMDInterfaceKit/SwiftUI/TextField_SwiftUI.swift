@@ -12,11 +12,12 @@ struct SwiftUIView: View {
     private let title: String
     private let placeholder: String
     
-    public @State var text: String = ""
+    public @Binding var text: String = ""
     
-    public init(title: String, placeholder: String) {
+    public init(title: String, placeholder: String, text: String) {
         self.title = title
         self.placeholder = placeholder
+        self.text = text
     }
     
     var body: some View {
@@ -26,7 +27,7 @@ struct SwiftUIView: View {
                 .padding(.top, 16)
                 .padding(.horizontal, 12)
                 .font(Font.custom("Avenir-Heavy", size: 12))
-            TextField(placeholder, text: $email)
+            TextField(placeholder, text: $text)
                 .disableAutocorrection(true)
                 .padding(.horizontal, 12)
                 .padding(.bottom, 12)
