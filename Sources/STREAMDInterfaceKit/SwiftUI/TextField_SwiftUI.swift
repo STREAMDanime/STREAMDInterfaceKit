@@ -33,7 +33,6 @@ struct TextField_SwiftUI: View {
                 .padding(.horizontal, 12)
                 .padding(.bottom, 12)
                 .font(Font.custom("Avenir-Heavy", size: 14))
-                .sec
         }
         .background(Color.STREAMDColors.accent)
         .cornerRadius(6)
@@ -42,7 +41,7 @@ struct TextField_SwiftUI: View {
 
 struct TextField_SwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        @State var text: String
-        TextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: $text)
+//        @State var text: String
+//        TextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: $text)
     }
 }
