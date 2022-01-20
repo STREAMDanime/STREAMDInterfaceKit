@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "SimpleToast",
+        "repositoryURL": "https://github.com/sanzaru/SimpleToast.git",
+        "state": {
+          "branch": "master",
+          "revision": "2ad636d63fdb611f867c8cd7ccbdcea907cdf189",
+          "version": null
+        }
+      },
+      {
         "package": "SnapKit",
         "repositoryURL": "https://github.com/SnapKit/SnapKit",
         "state": {
