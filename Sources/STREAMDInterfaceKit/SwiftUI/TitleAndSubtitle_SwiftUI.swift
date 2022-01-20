@@ -22,21 +22,12 @@ public struct TitleAndSubtitle_SwiftUI: View {
             Text(title)
                 .font(.STREAMDFonts.title)
                 .foregroundColor(Color.STREAMDColors.primaryText)
+                .multilineTextAlignment(.leading)
             Text(subtitle)
                 .font(.STREAMDFonts.subtitle)
                 .foregroundColor(Color.STREAMDColors.secondaryText)
+                .multilineTextAlignment(.leading)
         }
-//        VStack(alignment: .leading) {
-//            Text(title)
-//                .font(.STREAMDFonts.title)
-//                .foregroundColor(Color.STREAMDColors.primaryText)
-//                .frame(maxWidth: .infinity, alignment: .leading)
-//            Text(subtitle)
-//                .font(.STREAMDFonts.subtitle)
-//                .foregroundColor(Color.STREAMDColors.secondaryText)
-//                .frame(maxWidth: .infinity, alignment: .leading)
-//        }
-//        .background(Color.red)
     }
 }
 
