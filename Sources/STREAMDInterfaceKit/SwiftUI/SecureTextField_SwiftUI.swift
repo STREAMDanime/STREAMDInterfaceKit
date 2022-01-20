@@ -19,6 +19,7 @@ public struct SecureTextField_SwiftUI: View {
     public init(title: String, placeholder: String, text: Binding<String>, keyboardType: UIKeyboardType) {
         self.title = title
         self.placeholder = placeholder
+        self.keyboardType = keyboardType
         self._text = text
     }
     
@@ -45,7 +46,7 @@ public struct SecureTextField_SwiftUI: View {
 
 struct SecureTextField_SwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        SecureTextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: .constant("text"))
+        SecureTextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: .constant("text"), keyboardType: .emailAddress)
             .preferredColorScheme(.dark)
     }
 }

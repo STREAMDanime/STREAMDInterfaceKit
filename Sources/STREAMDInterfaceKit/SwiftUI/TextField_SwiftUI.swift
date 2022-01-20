@@ -11,12 +11,14 @@ public struct TextField_SwiftUI: View {
     
     private let title: String
     private let placeholder: String
+    private let keyboardType: UIKeyboardType
     
     @Binding var text: String
     
     public init(title: String, placeholder: String, text: Binding<String>, keyboardType: UIKeyboardType) {
         self.title = title
         self.placeholder = placeholder
+        self.keyboardType = keyboardType
         self._text = text
     }
     
@@ -43,6 +45,6 @@ public struct TextField_SwiftUI: View {
 
 struct TextField_SwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        TextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: .constant("text"))
+        TextField_SwiftUI(title: "TITLE", placeholder: "Placeholder", text: .constant("text"), keyboardType: .emailAddress)
     }
 }
