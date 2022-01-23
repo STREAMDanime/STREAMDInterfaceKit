@@ -38,6 +38,7 @@ extension UIColor {
         public static let funimation       = UIColor(named: "funimation", in: bundle, compatibleWith: nil)!
         public static let hiDive           = UIColor(named: "hiDive", in: bundle, compatibleWith: nil)!
         public static let netflix          = UIColor(named: "netflix", in: bundle, compatibleWith: nil)!
+        public static let hulu             = UIColor(named: "hulu", in: bundle, compatibleWith: nil)!
     }
 }
 
@@ -67,5 +68,6 @@ extension Color {
         public static let funimation = Color("funimation", bundle: bundle)
         public static let hiDive = Color("hiDive", bundle: bundle)
         public static let netflix = Color("netflix", bundle: bundle)
+        public static let hulu = Color("hulu", bundle: bundle)
     }
 }
