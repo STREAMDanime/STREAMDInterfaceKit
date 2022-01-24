@@ -39,6 +39,7 @@ extension UIColor {
         public static let hiDive           = UIColor(named: "hiDive", in: bundle, compatibleWith: nil)!
         public static let netflix          = UIColor(named: "netflix", in: bundle, compatibleWith: nil)!
         public static let hulu             = UIColor(named: "hulu", in: bundle, compatibleWith: nil)!
+        public static let huluBackground   = UIColor(named: "huluBackground", in: bundle, compatibleWith: nil)!
     }
 }
 
@@ -62,12 +63,13 @@ extension Color {
         private static let premiumGradientColor2 = Color(red: 218/255, green: 34/255, blue: 255/255)
         public static let premiumGradient   = LinearGradient(gradient: Gradient(colors: [Color.STREAMDColors.premiumGradientColor1, Color.STREAMDColors.premiumGradientColor2]), startPoint: .topLeading, endPoint: .bottomTrailing)
         
-        public static let crunchyroll = Color("crunchyroll", bundle: bundle)
-        public static let vrv = Color("vrv", bundle: bundle)
-        public static let vrvBackground = Color("vrvBackground", bundle: bundle)
-        public static let funimation = Color("funimation", bundle: bundle)
-        public static let hiDive = Color("hiDive", bundle: bundle)
-        public static let netflix = Color("netflix", bundle: bundle)
-        public static let hulu = Color("hulu", bundle: bundle)
+        public static let crunchyroll       = Color("crunchyroll", bundle: bundle)
+        public static let vrv               = Color("vrv", bundle: bundle)
+        public static let vrvBackground     = Color("vrvBackground", bundle: bundle)
+        public static let funimation        = Color("funimation", bundle: bundle)
+        public static let hiDive            = Color("hiDive", bundle: bundle)
+        public static let netflix           = Color("netflix", bundle: bundle)
+        public static let hulu              = Color("hulu", bundle: bundle)
+        public static let huluBackground    = Color("hulu", bundle: bundle)
     }
 }
