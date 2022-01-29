@@ -163,6 +163,7 @@ public class Button: UIButton {
         }
     }
     
+    @available(iOS 15, *)
     public func setStyle(_ s: ButtonConfigurationTypeEnum) {
         self.buttonConfigurationEnum = s
         switch buttonConfigurationEnum {
@@ -286,6 +287,7 @@ public class Button: UIButton {
         self.imageView?.image = image
     }
     
+    @available(iOS 15, *)
     public func setImagePlacement(_ placement: NSDirectionalRectEdge) {
         configuration?.imagePlacement = placement
     }
