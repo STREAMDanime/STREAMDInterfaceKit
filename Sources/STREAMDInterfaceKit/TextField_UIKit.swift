@@ -87,10 +87,10 @@ import SwiftUI
     struct TextFieldViewContainer: UIViewRepresentable {
         typealias UIViewType = TextField_UIKit
         func makeUIView(context: Context) -> UIViewType {
-            return TextField_UIKit(placeholder: "youremail@address.com", isSecure: false)
+            return UIViewType(placeholder: "youremail@address.com", isSecure: false)
         }
 
-        func updateUIView(_ uiView: TextField_UIKit, context: Context) {}
+        func updateUIView(_ uiView: UIViewType, context: Context) {}
     }
 
     struct TextFieldView_Preview: PreviewProvider {
