@@ -40,6 +40,7 @@ public class Button: UIButton {
             return
         }
         
+        self.clipsToBounds = true
         self.imageView?.layer.masksToBounds = true
         self.imageView?.contentMode = .scaleAspectFit
     }
@@ -74,6 +75,7 @@ public class Button: UIButton {
             break
         }
         
+        self.clipsToBounds = true
         self.titleLabel?.font = self.font
         self.setTitle(title)
         self.setTitleColor(.white)
@@ -115,6 +117,7 @@ public class Button: UIButton {
             break
         }
         
+        self.clipsToBounds = true
         self.titleLabel?.font = self.font
         self.setTitle(title, for: .normal)
         self.setTitleColor(.STREAMDColors.primaryText)
