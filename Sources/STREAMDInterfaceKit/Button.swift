@@ -171,12 +171,12 @@ public class Button: UIButton {
         switch buttonConfigurationEnum {
         case .plain:
             setBackgroundColor(.clear)
-            setTitleColor(.white)
+            setTitleColor(.STREAMDColors.primaryText)
         case .filled:
             setBackgroundColor(.STREAMDColors.primaryPurple)
             setTitleColor(.white)
         case .tinted:
-            setBackgroundColor(.STREAMDColors.primaryText)
+            setBackgroundColor(.STREAMDColors.primaryPurpleAccent)
             setTitleColor(.white)
         case .gray:
             setTitleColor(.STREAMDColors.primaryPurple)
@@ -185,13 +185,13 @@ public class Button: UIButton {
             if #available(iOS 15.0, *) {
                 var config = Configuration.bordered()
                 config.baseBackgroundColor = .clear
-                config.baseForegroundColor = .white
+                config.baseForegroundColor = .STREAMDColors.primaryText
                 config.background.strokeWidth = 1
                 config.background.strokeColor = .STREAMDColors.primaryPurple
                 self.configuration = config
             } else {
                 setBackgroundColor(.clear)
-                setTitleColor(.white)
+                setTitleColor(.STREAMDColors.primaryText)
                 layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
                 layer.borderWidth = 1
             }
