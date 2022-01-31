@@ -43,8 +43,7 @@ public class Button: UIButton {
         setStyle(buttonConfiguration)
         setCornerRadius(6)
         setFont(self.font)
-        self.imageView?.layer.masksToBounds = true
-        self.imageView?.contentMode = .scaleAspectFit
+        setImage(image)
     }
     
     public init(title: String, buttonConfiguration: ButtonConfigurationTypeEnum) {
@@ -249,6 +248,8 @@ public class Button: UIButton {
             self.configuration = config
             return
         }
+        self.imageView?.layer.masksToBounds = true
+        self.imageView?.contentMode = .scaleAspectFit
         self.imageView?.image = image
         self.imageView?.tintColor = .white
     }
