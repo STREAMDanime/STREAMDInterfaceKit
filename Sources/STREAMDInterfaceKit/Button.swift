@@ -163,42 +163,38 @@ public class Button: UIButton {
         }
     }
     
-    @available(iOS 15, *)
     public func setStyle(_ s: ButtonConfigurationTypeEnum) {
         self.buttonConfigurationEnum = s
         switch buttonConfigurationEnum {
         case .plain:
-            var config = Configuration.plain()
-            config.baseBackgroundColor = .clear
-            config.baseForegroundColor = .white
-            self.configuration = config
+            setBackgroundColor(.clear)
+            setTitleColor(.white)
         case .filled:
-            var config = Configuration.filled()
-            config.baseBackgroundColor = .STREAMDColors.primaryPurple
-            config.baseForegroundColor = .white
-            self.configuration = config
+            setBackgroundColor(.STREAMDColors.primaryPurple)
+            setTitleColor(.white)
         case .tinted:
-            var config = Configuration.tinted()
-            config.baseBackgroundColor = .STREAMDColors.primaryPurple
-            config.baseForegroundColor = .white
-            self.configuration = config
+            setBackgroundColor(.STREAMDColors.primaryText)
+            setTitleColor(.white)
         case .gray:
-            var config = Configuration.gray()
-            config.baseBackgroundColor = .STREAMDColors.primaryPurple
-            config.baseForegroundColor = .white
-            self.configuration = config
+            setTitleColor(.STREAMDColors.primaryPurple)
+            setTitleColor(.white)
         case .bordered:
-            var config = Configuration.bordered()
-            config.baseBackgroundColor = .clear
-            config.baseForegroundColor = .white
-            config.background.strokeWidth = 1
-            config.background.strokeColor = .STREAMDColors.primaryPurple
-            self.configuration = config
+            if #available(iOS 15.0, *) {
+                var config = Configuration.bordered()
+                config.baseBackgroundColor = .clear
+                config.baseForegroundColor = .white
+                config.background.strokeWidth = 1
+                config.background.strokeColor = .STREAMDColors.primaryPurple
+                self.configuration = config
+            } else {
+                setBackgroundColor(.clear)
+                setTitleColor(.white)
+                layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
+                layer.borderWidth = 1
+            }            
         case .accent:
-            var config = Configuration.filled()
-            config.baseBackgroundColor = .STREAMDColors.accent
-            config.baseForegroundColor = .white
-            self.configuration = config
+            setTitleColor(.STREAMDColors.accent)
+            setTitleColor(.white)
         }
         
     }
@@ -327,9 +323,16 @@ public class Button: UIButton {
     }
     
     @available(iOS 15.0, *)
-    private func setTitleAlignment(_ alignment: UIButton.Configuration.TitleAlignment) {
+    private func setTitleAlignment(_ alignment: ButtonContentAlignment) {
         var config = self.configuration
-        config?.titleAlignment = alignment
+        switch alignment {
+        case .leading:
+            config?.titleAlignment = .leading
+        case .center:
+            config?.titleAlignment = .center
+        case .trailing:
+            config?.titleAlignment = .trailing
+        }
         self.configuration = config
     }
 }
