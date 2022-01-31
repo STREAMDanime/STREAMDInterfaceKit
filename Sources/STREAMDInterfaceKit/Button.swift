@@ -26,7 +26,7 @@ public class Button: UIButton {
     
     internal var buttonConfigurationEnum: ButtonConfigurationTypeEnum
     
-    public var font: UIFont? = UIFont.STREAMDFonts.sectionHeader
+    public var font: UIFont? = UIFont.STREAMDFonts.buttonTitle
     
     public init(image: UIImage, buttonConfiguration: ButtonConfigurationTypeEnum) {
         self.buttonConfigurationEnum = buttonConfiguration
@@ -42,6 +42,7 @@ public class Button: UIButton {
         
         setStyle(buttonConfiguration)
         setCornerRadius(6)
+        setFont(self.font)
         self.imageView?.layer.masksToBounds = true
         self.imageView?.contentMode = .scaleAspectFit
     }
@@ -62,10 +63,8 @@ public class Button: UIButton {
         
         setStyle(buttonConfiguration)
         setCornerRadius(6)
-        self.titleLabel?.font = self.font
-        self.setTitle(title)
-        self.setTitleColor(.white)
-        
+        setFont(self.font)
+        setTitle(title)
     }
     
     public init(image: UIImage, title: String, buttonConfiguration: ButtonConfigurationTypeEnum, primaryAction: UIKit.UIAction? = nil) {
@@ -89,10 +88,8 @@ public class Button: UIButton {
         
         setStyle(buttonConfiguration)
         setCornerRadius(6)
-        self.titleLabel?.font = self.font
-        self.setTitle(title, for: .normal)
-        self.setTitleColor(.STREAMDColors.primaryText)
-        
+        setFont(self.font)
+        setTitle(title, for: .normal)
     }
     
     required init?(coder: NSCoder) {
@@ -119,7 +116,7 @@ public class Button: UIButton {
             return config
         case .gray:
             var config = Configuration.gray()
-            config.baseBackgroundColor = .STREAMDColors.primaryPurple
+            config.baseBackgroundColor = .STREAMDColors.primaryPurpleAccent
             config.baseForegroundColor = .white
             return config
         case .bordered:
