@@ -40,6 +40,7 @@ public class Button: UIButton {
             return
         }
         
+        setStyle(buttonConfiguration)
         setCornerRadius(6)
         self.imageView?.layer.masksToBounds = true
         self.imageView?.contentMode = .scaleAspectFit
@@ -59,22 +60,7 @@ public class Button: UIButton {
             return
         }
         
-        switch buttonConfiguration {
-        case .plain:
-            self.backgroundColor = .clear
-        case .filled:
-            self.backgroundColor = .STREAMDColors.primaryPurple
-        case .tinted:
-            self.backgroundColor = .STREAMDColors.primaryPurple.withAlphaComponent(0.40)
-        case .gray:
-            break
-        case .bordered:
-            self.layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
-            self.layer.borderWidth = 1
-        case .accent:
-            break
-        }
-        
+        setStyle(buttonConfiguration)
         setCornerRadius(6)
         self.titleLabel?.font = self.font
         self.setTitle(title)
@@ -101,22 +87,7 @@ public class Button: UIButton {
             return
         }
         
-        switch buttonConfiguration {
-        case .plain:
-            self.backgroundColor = .clear
-        case .filled:
-            self.backgroundColor = .STREAMDColors.primaryPurple
-        case .tinted:
-            self.backgroundColor = .STREAMDColors.primaryPurple.withAlphaComponent(0.40)
-        case .gray:
-            break
-        case .bordered:
-            self.layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
-            self.layer.borderWidth = 1
-        case .accent:
-            break
-        }
-        
+        setStyle(buttonConfiguration)
         setCornerRadius(6)
         self.titleLabel?.font = self.font
         self.setTitle(title, for: .normal)
