@@ -241,14 +241,15 @@ public class Button: UIButton {
         self.layer.cornerRadius = radius
     }
     
-    public func setImage(_ image: UIImage?, renderingMode: UIImage.RenderingMode = .alwaysTemplate) {
+    public override func setImage(_ image: UIImage?, for state: UIControl.State = .normal) {
         if #available(iOS 15.0, *) {
             var config = self.configuration
             config?.image = image
             self.configuration = config
             return
         }
-        super.setImage(image, for: .normal)
+        
+        super.setImage(image?.withRenderingMode(.alwaysTemplate), for: state)
         self.imageView?.layer.masksToBounds = true
         self.imageView?.contentMode = .scaleAspectFit
         self.imageView?.tintColor = .white
