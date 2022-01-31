@@ -222,7 +222,7 @@ public class Button: UIButton {
         self.imageView?.image = self.imageView?.image?.withTintColor(color!, renderingMode: .alwaysTemplate)
     }
     
-    public override func setTitle(_ title: String?, for state: UIControl.State) {
+    public override func setTitle(_ title: String?, for state: UIControl.State = .normal) {
         if #available(iOS 15.0, *) {
             var config = self.configuration
             config?.title = "\(title ?? "")"
