@@ -191,7 +191,7 @@ public class Button: UIButton {
                 setTitleColor(.white)
                 layer.borderColor = UIColor.STREAMDColors.primaryPurple.cgColor
                 layer.borderWidth = 1
-            }            
+            }
         case .accent:
             setTitleColor(.STREAMDColors.accent)
             setTitleColor(.white)
@@ -223,23 +223,19 @@ public class Button: UIButton {
     }
     
     public override func setTitle(_ title: String?, for state: UIControl.State) {
-        self.setTitle(title ?? "")
-    }
-    
-    public func setTitle<T>(_ title: T) {
         if #available(iOS 15.0, *) {
             var config = self.configuration
-            config?.title = "\(title)"
+            config?.title = "\(title ?? "")"
             
             var container = AttributeContainer()
             container.font = self.font
-            config?.attributedTitle = AttributedString("\(title)", attributes: container)
+            config?.attributedTitle = AttributedString("\(title ?? "")", attributes: container)
             self.configuration = config
             return
         }
-        self.setTitle("\(title)", for: .normal)
+        titleLabel?.text = title ?? ""
     }
-    
+
     public func setTitleColor(_ color: UIColor?) {
         self.setTitleColor(color, for: .normal)
         if #available(iOS 15.0, *) {
