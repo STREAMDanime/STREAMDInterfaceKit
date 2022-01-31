@@ -180,19 +180,6 @@ public class Button: UIButton {
         self.backgroundColor = c
     }
     
-    public func setImageTint(_ color: UIColor?) {
-        if #available(iOS 15.0, *) {
-            var config = self.configuration
-            config?.imageColorTransformer = UIConfigurationColorTransformer({ button in
-                return color!
-            })
-            self.configuration = config
-            return
-        }
-        
-        self.imageView?.image = self.imageView?.image?.withTintColor(color!, renderingMode: .alwaysTemplate)
-    }
-    
     public override func setTitle(_ title: String?, for state: UIControl.State = .normal) {
         super.setTitle(title, for: state)
         if #available(iOS 15.0, *) {
@@ -252,7 +239,19 @@ public class Button: UIButton {
         super.setImage(image?.withRenderingMode(.alwaysTemplate), for: state)
         self.imageView?.layer.masksToBounds = true
         self.imageView?.contentMode = .scaleAspectFit
-        self.imageView?.tintColor = .white
+        self.imageView?.tintColor = .STREAMDColors.primaryText
+    }
+    
+    public func setImageTint(_ color: UIColor) {
+        if #available(iOS 15.0, *) {
+            var config = self.configuration
+            config?.imageColorTransformer = UIConfigurationColorTransformer({ button in
+                return color
+            })
+            self.configuration = config
+            return
+        }
+        self.imageView?.tintColor = color
     }
     
     @available(iOS 15, *)
