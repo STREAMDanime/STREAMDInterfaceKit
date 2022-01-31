@@ -79,7 +79,7 @@ public class Button: UIButton {
             var container = AttributeContainer()
             container.font = self.font
             config.title = title
-            config.image = image.withTintColor(.systemRed, renderingMode: .alwaysTemplate)
+            config.image = image.withTintColor(.white, renderingMode: .alwaysTemplate)
             config.imagePadding = 8
             config.attributedTitle = AttributedString(title, attributes: container)
             self.configuration = config
@@ -90,6 +90,7 @@ public class Button: UIButton {
         setCornerRadius(6)
         setFont(self.font)
         setTitle(title, for: .normal)
+        setImage(image)
     }
     
     required init?(coder: NSCoder) {
@@ -249,6 +250,7 @@ public class Button: UIButton {
             return
         }
         self.imageView?.image = image
+        self.imageView?.tintColor = .white
     }
     
     @available(iOS 15, *)
