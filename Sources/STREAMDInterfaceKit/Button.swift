@@ -75,7 +75,7 @@ public class Button: UIButton {
         }
         
         self.titleLabel?.font = self.font
-        self.setTitle(title, for: .normal)
+        self.setTitle(title)
         self.setTitleColor(.white)
         
     }
@@ -223,6 +223,7 @@ public class Button: UIButton {
     }
     
     public override func setTitle(_ title: String?, for state: UIControl.State = .normal) {
+        super.setTitle(title, for: state)
         if #available(iOS 15.0, *) {
             var config = self.configuration
             config?.title = "\(title ?? "")"
@@ -233,11 +234,10 @@ public class Button: UIButton {
             self.configuration = config
             return
         }
-        titleLabel?.text = title ?? ""
     }
 
     public func setTitleColor(_ color: UIColor?) {
-        self.setTitleColor(color, for: .normal)
+        super.setTitleColor(color, for: .normal)
         if #available(iOS 15.0, *) {
             var config = self.configuration
             config?.baseForegroundColor = color
