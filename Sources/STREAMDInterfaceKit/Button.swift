@@ -248,9 +248,9 @@ public class Button: UIButton {
             self.configuration = config
             return
         }
+        super.setImage(image, for: .normal)
         self.imageView?.layer.masksToBounds = true
         self.imageView?.contentMode = .scaleAspectFit
-        self.imageView?.image = image
         self.imageView?.tintColor = .white
     }
     
