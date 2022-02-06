@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class TitleAndsubtitle: UIView {
+public class TitleAndSubtitle: UIView {
     
     init(title: String, subtitle: String) {
         super.init(frame: .zero)
