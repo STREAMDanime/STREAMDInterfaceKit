@@ -11,7 +11,6 @@ public class SubtitleLabel: UILabel {
     
     public init(_ text: String = "") {
         super.init(frame: .zero)
-            
         self.text = text
         self.font = .STREAMDFonts.subtitle
         self.textColor = .STREAMDColors.secondaryText
