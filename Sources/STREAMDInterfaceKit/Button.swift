@@ -203,9 +203,9 @@ public class Button: UIButton {
         }
     }
     
-    
-    
     public func setFont(_ font: UIFont?) {
+        self.titleLabel?.font = font
+        self.font = font
         if #available(iOS 15.0, *) {
             var config = self.configuration
             var attributeContainer = AttributeContainer()
@@ -216,8 +216,6 @@ public class Button: UIButton {
             self.configuration = config
             return
         }
-        self.titleLabel?.font = font
-        self.font = font
     }
     
     public func setCornerRadius(_ radius: CGFloat) {
