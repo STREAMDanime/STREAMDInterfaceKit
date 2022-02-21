@@ -36,7 +36,6 @@ public class KeyVisualView: UIImageView {
     public let imagePlaceholder: UIImageView = {
         let view = UIImageView()
         view.tintColor = .STREAMDColors.primaryPurple
-        view.image = UIImage(named: "image-placeholder", in: .main, with: .none)
         view.contentMode = .scaleAspectFit
         return view
     }()
@@ -50,6 +49,11 @@ public class KeyVisualView: UIImageView {
         return label
     }()
     public func createEmptyImageLayout() {
+        
+//        if let path = Bundle.module.path(forResource: "image-placeholder", ofType: "png"),
+//                      let image = UIImage(contentsOfFile: path) {
+//            imagePlaceholder.image = image
+//        }
                 
         addSubview(imagePlaceholder)
         imagePlaceholder.snp.makeConstraints { make in
