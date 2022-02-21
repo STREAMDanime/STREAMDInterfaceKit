@@ -35,9 +35,9 @@ public class KeyVisualView: UIImageView {
 
     public let imagePlaceholder: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "image-placeholder")?.withRenderingMode(.alwaysTemplate)
         view.tintColor = .STREAMDColors.primaryPurple
         view.contentMode = .scaleAspectFit
+//        view.backgroundColor = .systemRed
         return view
     }()
     private let emptyImageLabel: UILabel = {
@@ -49,12 +49,12 @@ public class KeyVisualView: UIImageView {
         label.textAlignment = .center
         return label
     }()
-    open func createEmptyImageLayout() {
-        
+    public func createEmptyImageLayout() {
+                
         addSubview(imagePlaceholder)
         imagePlaceholder.snp.makeConstraints { make in
-            make.width.equalToSuperview().multipliedBy(0.75)
-            make.height.equalTo(self.snp.width).multipliedBy(0.90).multipliedBy(1.4)
+            make.width.equalTo(self.snp.width).multipliedBy(0.75)
+            make.height.equalTo(imagePlaceholder.snp.width).multipliedBy(0.75)
             make.centerX.equalToSuperview()
             make.bottom.equalTo(self.snp.centerY)
         }
@@ -85,9 +85,11 @@ import SwiftUI
 
     struct KeyVisualView_Preview: PreviewProvider {
         static var previews: some View {
+            
             Group {
                 KeyVisualViewContainer().colorScheme(.light)
                     .frame(width: 140, height: 190, alignment: .leading)
+                    .preferredColorScheme(.dark)
                 KeyVisualViewContainer().colorScheme(.dark)
                     .frame(width: 140, height: 190, alignment: .leading)
             }.previewLayout(.fixed(width: 400, height: 400))
