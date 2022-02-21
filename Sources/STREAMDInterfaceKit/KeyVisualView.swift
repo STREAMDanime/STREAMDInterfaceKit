@@ -36,14 +36,14 @@ public class KeyVisualView: UIImageView {
     public let imagePlaceholder: UIImageView = {
         let view = UIImageView()
         view.tintColor = .STREAMDColors.primaryPurple
+        view.image = UIImage(named: "image-placeholder", in: .main, with: .none)
         view.contentMode = .scaleAspectFit
-//        view.backgroundColor = .systemRed
         return view
     }()
     private let emptyImageLabel: UILabel = {
         let label = UILabel()
         label.text = "No image here... yet!"
-        label.font = .STREAMDFonts.body?.withSize(12)
+        label.font = .STREAMDFonts.body
         label.textColor = .STREAMDColors.secondaryText
         label.numberOfLines = -1
         label.textAlignment = .center
@@ -76,7 +76,7 @@ import SwiftUI
         typealias UIViewType = KeyVisualView
         func makeUIView(context: Context) -> UIViewType {
             let view = UIViewType()
-            view.image = nil
+            view.createEmptyImageLayout()
             return view
         }
 
