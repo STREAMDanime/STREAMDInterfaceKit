@@ -16,16 +16,13 @@ public class KeyVisualView: UIImageView {
         }
     }
     
-    init() {
+    public init() {
         super.init(frame: .zero)
-        
         self.layer.cornerRadius = 6
         self.backgroundColor = .STREAMDColors.accent
         self.contentMode = .scaleAspectFill
         self.layer.masksToBounds = true
         self.clipsToBounds = true
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
     required init?(coder: NSCoder) {
