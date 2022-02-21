@@ -53,8 +53,8 @@ public class KeyVisualView: UIImageView {
                 
         addSubview(imagePlaceholder)
         imagePlaceholder.snp.makeConstraints { make in
-            make.width.equalTo(self.snp.width).multipliedBy(0.75)
-            make.height.equalTo(imagePlaceholder.snp.width).multipliedBy(0.75)
+            make.width.equalTo(108)
+            make.height.equalTo(65)
             make.centerX.equalToSuperview()
             make.bottom.equalTo(self.snp.centerY)
         }
