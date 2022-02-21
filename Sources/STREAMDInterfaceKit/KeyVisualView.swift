@@ -33,11 +33,12 @@ public class KeyVisualView: UIImageView {
         let view = UIImageView()
         view.image = UIImage(named: "image-placeholder")
         view.contentMode = .scaleAspectFit
+        view.backgroundColor = .STREAMDColors.red
         return view
     }()
     private let emptyImageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Looks like we're missing an image for this anime. Don't worry, it'll be added soon!"
+        label.text = "No image here... yet!"
         label.font = .STREAMDFonts.body
         label.textColor = .STREAMDColors.secondaryText
         label.numberOfLines = -1
