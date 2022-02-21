@@ -28,38 +28,69 @@ public class KeyVisualView: UIImageView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func setImagePlaceholder(_ i: UIImage?) {
+        imagePlaceholder.image = i
+    }
 
-    private let imagePlaceholder: UIImageView = {
+    public let imagePlaceholder: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "image-placeholder")
+        view.image = UIImage(named: "image-placeholder")?.withRenderingMode(.alwaysTemplate)
+        view.tintColor = .STREAMDColors.primaryPurple
         view.contentMode = .scaleAspectFit
-        view.backgroundColor = .STREAMDColors.red
         return view
     }()
     private let emptyImageLabel: UILabel = {
         let label = UILabel()
         label.text = "No image here... yet!"
-        label.font = .STREAMDFonts.body
+        label.font = .STREAMDFonts.body?.withSize(12)
         label.textColor = .STREAMDColors.secondaryText
         label.numberOfLines = -1
+        label.textAlignment = .center
         return label
     }()
-    private func createEmptyImageLayout() {
+    open func createEmptyImageLayout() {
         
         addSubview(imagePlaceholder)
         imagePlaceholder.snp.makeConstraints { make in
-            make.width.equalTo(300)
-            make.height.equalTo(200)
+            make.width.equalToSuperview().multipliedBy(0.75)
+            make.height.equalTo(self.snp.width).multipliedBy(0.90).multipliedBy(1.4)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(self.snp.centerY).offset(-16)
+            make.bottom.equalTo(self.snp.centerY)
         }
         
         addSubview(emptyImageLabel)
         emptyImageLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.top.equalTo(self.snp.centerY)
+            make.left.equalToSuperview().offset(8)
+            make.right.equalToSuperview().offset(-8)
+            make.top.equalTo(imagePlaceholder.snp.bottom).offset(12)
         }
     }
     
 }
+
+// MARK: - SwiftUI Preview
+import SwiftUI
+#if DEBUG
+    struct KeyVisualViewContainer: UIViewRepresentable {
+        typealias UIViewType = KeyVisualView
+        func makeUIView(context: Context) -> UIViewType {
+            let view = UIViewType()
+            view.image = nil
+            return view
+        }
+
+        func updateUIView(_ uiView: UIViewType, context: Context) {}
+    }
+
+    struct KeyVisualView_Preview: PreviewProvider {
+        static var previews: some View {
+            Group {
+                KeyVisualViewContainer().colorScheme(.light)
+                    .frame(width: 140, height: 190, alignment: .leading)
+                KeyVisualViewContainer().colorScheme(.dark)
+                    .frame(width: 140, height: 190, alignment: .leading)
+            }.previewLayout(.fixed(width: 400, height: 400))
+        }
+    }
+#endif
