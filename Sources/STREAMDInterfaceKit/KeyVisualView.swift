@@ -35,7 +35,7 @@ public class KeyVisualView: UIImageView {
 
     public let imagePlaceholder: UIImageView = {
         let view = UIImageView()
-        view.tintColor = .STREAMDColors.primaryPurple
+        view.tintColor = .STREAMDColors.primaryText
         view.contentMode = .scaleAspectFit
         return view
     }()
