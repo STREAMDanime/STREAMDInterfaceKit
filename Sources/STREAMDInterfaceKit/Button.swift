@@ -210,7 +210,7 @@ public class Button: UIButton {
             var config = self.configuration
             let configTitle = AttributedString(config?.title ?? "",
                                                attributes: .init()
-                                                .font(font ?? .STREAMDFonts.buttonTitle)
+                                                .font(font ?? .STREAMDFonts.buttonTitle!)
             )
             config?.attributedTitle = configTitle
             self.configuration = config
