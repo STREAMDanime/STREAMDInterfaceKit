@@ -55,13 +55,13 @@ extension Font {
 
 extension UIFont {
     public struct STREAMDFonts {
-        public static let title = UIFont(name: "Poppins-Bold", size: 35)!
-        public static let subtitle = UIFont(name: "Avenir-Heavy", size: 15)!
-        public static let heading1 = UIFont(name: "Poppins-Bold", size: 24)!
-        public static let heading2 = UIFont(name: "Poppins-Bold", size: 20)!
-        public static let heading3 = UIFont(name: "Poppins-Bold", size: 18)!
-        public static let body = UIFont(name: "Avenir-Medium", size: 14)!
-        public static let sectionHeader = UIFont(name: "Poppins-Bold", size: 14)!
-        public static let buttonTitle = UIFont(name: "Avenir-Heavy", size: 15)!
+        public static let title = UIFont(name: "Poppins-Bold", size: 35)
+        public static let subtitle = UIFont(name: "Avenir-Heavy", size: 15)
+        public static let heading1 = UIFont(name: "Poppins-Bold", size: 24)
+        public static let heading2 = UIFont(name: "Poppins-Bold", size: 20)
+        public static let heading3 = UIFont(name: "Poppins-Bold", size: 18)
+        public static let body = UIFont(name: "Avenir-Medium", size: 14)
+        public static let sectionHeader = UIFont(name: "Poppins-Bold", size: 14)
+        public static let buttonTitle = UIFont(name: "Avenir-Heavy", size: 15)
     }
 }
