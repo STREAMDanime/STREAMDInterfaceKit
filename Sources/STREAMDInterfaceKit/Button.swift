@@ -26,7 +26,7 @@ public class Button: UIButton {
     
     internal var buttonConfigurationEnum: ButtonConfigurationTypeEnum
     
-    public var font: UIFont? = UIFont.STREAMDFonts.buttonTitle
+    public var font: UIFont = UIFont.STREAMDFonts.buttonTitle!
     
     public init(image: UIImage, buttonConfiguration: ButtonConfigurationTypeEnum) {
         self.buttonConfigurationEnum = buttonConfiguration
@@ -203,14 +203,15 @@ public class Button: UIButton {
         }
     }
     
-    public func setFont(_ font: UIFont?) {
+    public func setFont(_ font: UIFont) {
         self.titleLabel?.font = font
         self.font = font
         if #available(iOS 15.0, *) {
             var config = self.configuration
-            var attributeContainer = AttributeContainer()
-            attributeContainer.font = font
-            let configTitle = AttributedString(config?.title ?? "", attributes: attributeContainer)
+            let configTitle = AttributedString(config?.title ?? "",
+                                               attributes: .init()
+                                                .font(font)
+            )
             config?.attributedTitle = configTitle
             self.configuration = config
             return
