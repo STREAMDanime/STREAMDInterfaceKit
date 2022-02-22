@@ -17,7 +17,7 @@ public class TextField_UIKit: UITextField {
 
         self.attributedPlaceholder = NSAttributedString(string: "\(placeholder)", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.secondaryText.withAlphaComponent(0.40),
-            NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 14)!,
+            NSAttributedString.Key.font: UIFont(name: "NunitoSans-SemiBold", size: 14)!,
         ])
         isSecureTextEntry = isSecure
         setPlaceholder(withString: placeholder)
@@ -30,7 +30,7 @@ public class TextField_UIKit: UITextField {
 
     public func setPlaceholder(withString p: String) {
         let attributedPlaceholder = NSAttributedString(string: p, attributes: [
-            NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 14)!,
+            NSAttributedString.Key.font: UIFont(name: "NunitoSans-Bold", size: 14)!,
             NSAttributedString.Key.foregroundColor: UIColor.STREAMDColors.secondaryText.withAlphaComponent(0.40),
         ])
         self.attributedPlaceholder = attributedPlaceholder
@@ -54,7 +54,7 @@ public class TextField_UIKit: UITextField {
 
     private func setUpAttributes() {
         layer.cornerRadius = 6
-        font = UIFont(name: "Avenir-Heavy", size: 14)
+        font = UIFont(name: "NunitoSans-Bold", size: 14)
         textColor = .STREAMDColors.primaryText
         keyboardAppearance = .dark
         backgroundColor = .STREAMDColors.accent
@@ -63,7 +63,7 @@ public class TextField_UIKit: UITextField {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Avenir-Heavy", size: 12)
+        label.font = UIFont(name: "NunitoSans-Bold", size: 12)
         label.textColor = .STREAMDColors.secondaryText
         return label
     }()

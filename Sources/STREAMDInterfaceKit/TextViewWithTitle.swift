@@ -49,21 +49,21 @@ public class TextViewWithTitle: UIView, UITextViewDelegate {
     private func setupAttributes() {
         textView.backgroundColor = .STREAMDColors.accent
         textView.layer.cornerRadius = 6
-        textView.font = UIFont(name: "Avenir-Heavy", size: 14)
+        textView.font = UIFont(name: "NunitoSans-Bold", size: 14)
         textView.textColor = .STREAMDColors.primaryText
         textView.keyboardAppearance = .dark
     }
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Avenir-Medium", size: 12)
+        label.font = UIFont(name: "NunitoSans-SemiBold", size: 12)
         label.textColor = .STREAMDColors.primaryText
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     let textView: UITextView = {
         let view = UITextView()
-        view.font = UIFont(name: "Avenir-Medium", size: 14)
+        view.font = UIFont(name: "NunitoSans-SemiBold", size: 14)
         view.textColor = .STREAMDColors.primaryText
         view.backgroundColor = .clear
         view.isScrollEnabled = false

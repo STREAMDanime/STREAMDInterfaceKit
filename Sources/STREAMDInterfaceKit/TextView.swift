@@ -23,7 +23,7 @@ public class TextView: UITextView {
     }
 
     public func setUpAttributes() {
-        font = UIFont(name: "Avenir-Medium", size: 14)
+        font = UIFont(name: "NunitoSans-SemiBold", size: 14)
         textColor = .STREAMDColors.primaryText
         backgroundColor = .STREAMDColors.accent
         layer.cornerRadius = 6
@@ -32,7 +32,7 @@ public class TextView: UITextView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Avenir-Heavy", size: 12)
+        label.font = UIFont(name: "NunitoSans-Bold", size: 12)
         label.textColor = .STREAMDColors.secondaryText
         return label
     }()

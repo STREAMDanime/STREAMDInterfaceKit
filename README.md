@@ -14,16 +14,16 @@ STREAMDInterfaceKit is a Swift package that contains standard views, styles, and
 
 STREAMDInterfaceKit includes the following stanard font styles with the respective fonts.
 
-| Standard Font    | Font Used | Font Style | Font Size |
-| ---------------- | --------- | ---------- | --------- |
-| `.title`         | Poppins   | Bold       | 35        |
-| `.subtitle`      | Avenir    | Heavy      | 15        |
-| `.heading1`      | Poppins   | Bold       | 24        |
-| `.heading2`      | Poppins   | Bold       | 20        |
-| `.heading3`      | Poppins   | Bold       | 18        |
-| `.body    `      | Avenir    | Medium     | 14        |
-| `.sectionHeader` | Poppins   | Bold       | 13        |
-| `.buttonTitle`   | Poppins   | SemiBold   | 14        |
+| Standard Font    | Font Used  | Font Style | Font Size |
+| ---------------- | ---------  | ---------- | --------- |
+| `.title`         | Poppins    | Bold       | 35        |
+| `.subtitle`      | NunitoSans | SemiBold   | 15        |
+| `.heading1`      | Poppins    | Bold       | 24        |
+| `.heading2`      | Poppins    | Bold       | 20        |
+| `.heading3`      | Poppins    | Bold       | 18        |
+| `.body    `      | NunitoSans | Bold       | 14        |
+| `.sectionHeader` | Poppins    | Bold       | 13        |
+| `.buttonTitle`   | Poppins    | SemiBold   | 14        |
 
 ## Using Included Fonts
 STREAMDInterfaceKit includes a number of standard font style, some of which use custom fonts included in the package. In order to use these custom fonts, you need to do the following:
