@@ -26,5 +26,8 @@ public struct STREAMDInterfaceKit {
         STREAMDFonts.Poppins.allCases.forEach { font in
             registerFont(bundle: .module, fontName: font.fullName, fontExtension: font.fontExtension)
         }
+        STREAMDFonts.NunitoSans.allCases.forEach { font in
+            registerFont(bundle: .module, fontName: font.fullName, fontExtension: font.fontExtension)
+        }
     }
 }
