@@ -22,7 +22,7 @@ public enum ButtonContentAlignment {
     case trailing
 }
 
-public class Button2: UIButton {
+public class Button: UIButton {
     
     internal var buttonConfigurationEnum: ButtonConfigurationTypeEnum
     
