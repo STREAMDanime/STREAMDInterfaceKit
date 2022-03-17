@@ -22,7 +22,7 @@ public enum ButtonContentAlignment {
     case trailing
 }
 
-public class Button: UIButton {
+public class Button2: UIButton {
     
     internal var buttonConfigurationEnum: ButtonConfigurationTypeEnum
     
@@ -181,7 +181,6 @@ public class Button: UIButton {
     }
     
     public override func setTitle(_ title: String?, for state: UIControl.State = .normal) {
-        super.setTitle(title, for: state)
         if #available(iOS 15.0, *) {
             var config = self.configuration
             config?.title = "\(title ?? "")"
@@ -190,8 +189,10 @@ public class Button: UIButton {
             container.font = self.font
             config?.attributedTitle = AttributedString("\(title ?? "")", attributes: container)
             self.configuration = config
+            self.setFont(self.font)
             return
         }
+        super.setTitle(title, for: state)
     }
 
     public func setTitleColor(_ color: UIColor?) {
